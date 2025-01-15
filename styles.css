@@ -1,0 +1,117 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --text-color: #ecf0f1;
+}
+
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#resources-display {
+  grid-column: 1 / -1;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+#minerals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.mineral-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  text-align: center;
+}
+
+.mineral-item .mps {
+  font-size: 0.8em;
+  color: #95a5a6;
+  margin-top: 5px;
+}
+
+.mineral-item:hover {
+  transform: scale(1.05);
+}
+
+.mineral-item:active {
+  transform: scale(0.95);
+}
+
+#miners-section, #store-section {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.miner-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.store-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.store-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--secondary-color);
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.9;
+}

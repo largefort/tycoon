@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Idle Mineral Tycoon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="resources-display">
+      <h2>Minerals</h2>
+      <div id="minerals-grid"></div>
+    </div>
+    
+    <div id="miners-section">
+      <h2>Hired Miners</h2>
+      <div id="miners-container"></div>
+    </div>
+
+    <div id="store-section">
+      <h2>Hire Miners</h2>
+      <div id="store-container"></div>
+    </div>
+  </div>
+
+  <!-- Offline Progress Modal -->
+  <div id="offline-modal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome Back!</h2>
+      <p>You were away for: <span id="offline-time"></span></p>
+      <div id="offline-gains"></div>
+      <button id="claim-offline">Claim Resources</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
